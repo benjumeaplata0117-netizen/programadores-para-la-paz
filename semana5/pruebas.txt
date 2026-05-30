@@ -1,0 +1,10 @@
+Resultados de las pruebas en el navegador:
+
+1. Al acceder a http://localhost:3000
+El navegador realiza una solicitud GET a la raíz del servidor y muestra en pantalla el texto "Servidor activo", confirmando que la aplicación backend se está ejecutando correctamente.
+
+2. Al acceder a http://localhost:3000/saludo
+El servidor procesa la ruta estática '/saludo' e imprime en pantalla el mensaje "Hola comunidad".
+
+3. Al acceder a http://localhost:3000/mensaje/juan
+El servidor detecta un parámetro dinámico (:nombre) en la URL, toma el valor "juan" que escribimos en la dirección y devuelve la respuesta personalizada: "Hola juan". Si cambiamos "juan" por cualquier otro texto, el saludo cambiará automáticamente.
