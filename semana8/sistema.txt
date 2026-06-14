@@ -1,0 +1,5 @@
+cat << 'EOF' > sistema.txt
+El comando 'uname -a' muestra información completa sobre el sistema operativo y el hardware, incluyendo el nombre del kernel, el nodo de red (hostname), la versión del kernel, la arquitectura de la máquina (por ejemplo, x86_64) y el sistema operativo de base. Por otro lado, el comando 'whoami' imprime el nombre de usuario de la sesión actual que está ejecutando los comandos en la terminal.
+
+Conocer esta información es fundamental al administrar un servidor por varias razones: permite verificar si la arquitectura es compatible con el software que se desea instalar, ayuda a auditar qué usuario tiene privilegios en un momento dado, y es clave para la seguridad, ya que identificar la versión exacta del kernel permite detectar vulnerabilidades activas que requieran parches inmediatos.
+EOF

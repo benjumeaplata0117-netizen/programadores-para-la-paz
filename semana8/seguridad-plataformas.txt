@@ -1,0 +1,7 @@
+cat << 'EOF' > seguridad-plataformas.txt
+1. No exponer datos personales de los usuarios de la comunidad en canales públicos.
+2. Proteger las credenciales implementando autenticación de dos factores (2FA) en las cuentas administrativas.
+3. Usar conexiones seguras mediante protocolos cifrados como HTTPS y SSH.
+4. Registrar y auditar los accesos al servidor para identificar actividad inusual o accesos no autorizados.
+5. Limitar el acceso a información sensible utilizando el principio de menor privilegio (solo dar acceso a quien lo necesite).
+EOF
