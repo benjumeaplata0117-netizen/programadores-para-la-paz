@@ -1,0 +1,14 @@
+DISEÑO DE INTERFAZ BÁSICA DE USUARIO (UI)
+
+La interfaz de usuario para la plataforma de causas comunitarias se estructurará mediante un diseño limpio, accesible y responsivo dividido en las siguientes secciones funcionales:
+
+1. Panel Principal de Visualización (Dashboard):
+   Una cuadrícula pública que lista todas las causas disponibles en el sistema. Cada causa se muestra en una tarjeta ("Card") que incluye su título, categoría, fecha de creación y un resumen de la descripción.
+
+2. Componente de Interacción Comunitaria:
+   Cada tarjeta de causa integra un botón interactivo llamado "Apoyar esta Causa" acompañado de un contador numérico dinámico en tiempo real que refleja el total acumulado de apoyos utilizando datos de la entidad 'Apoyo'.
+
+3. Formulario Protegido de Creación de Causas:
+   Un módulo accesible únicamente para usuarios autenticados. Contiene campos interactivos para introducir el título (input de texto), descripción (textarea) y la selección de la categoría (menú desplegable). Al hacer clic en "Publicar", los datos se procesan a través de una petición POST hacia el servidor Node.js.
+
+Criterio de Privacidad: La interfaz está diseñada para ocultar cualquier dato personal en el frontend. Los nombres de quienes apoyan o crean las causas no se renderizan, priorizando la visualización colectiva del impacto de la iniciativa.

@@ -1,0 +1,25 @@
+MODELO DE DATOS SIMPLIFICADO: Plataforma "Causas Comunitarias"
+
+Entidad 1: Causa
+--------------------------------------------------------------------------------
+Campos principales:
+- id: INTEGER (Clave primaria, autoincremental)
+- titulo: VARCHAR(100) (Nombre o encabezado descriptivo de la iniciativa)
+- descripcion: TEXT (Detalle de la problemática o propuesta comunitaria)
+- categoria: VARCHAR(50) (Ej. Infraestructura, Seguridad, Medio Ambiente)
+- fecha_creacion: TIMESTAMP (Fecha y hora automática de registro)
+- estado: VARCHAR(20) (Ej. Activa, En Revisión, Finalizada)
+
+Propósito:
+Almacenar de forma estructurada todas las iniciativas, proyectos o peticiones colectivas propuestas por la comunidad que requieren visibilidad y respaldo público dentro de la plataforma.
+
+Entidad 2: Apoyo
+--------------------------------------------------------------------------------
+Campos principales:
+- id: INTEGER (Clave primaria, autoincremental)
+- causa_id: INTEGER (Clave foránea que conecta directamente con la entidad Causa)
+- usuario_anonimizado_id: VARCHAR(64) (Hash único o identificador seguro del usuario)
+- fecha_apoyo: TIMESTAMP (Fecha y hora exacta en la que se otorgó el respaldo)
+
+Propósito:
+Registrar los votos de respaldo y la participación de los ciudadanos en cada causa específica. Al mapear la relación mediante 'causa_id', el sistema puede calcular métricas de impacto y trazar el crecimiento del apoyo comunitario de forma auditable.

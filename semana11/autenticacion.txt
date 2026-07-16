@@ -1,0 +1,7 @@
+CONCEPTOS DE AUTENTICACIÓN Y SEGURIDAD EN PLATAFORMAS DIGITALES
+
+El proceso de login en una aplicación es el mecanismo de control de acceso que permite identificar y verificar la identidad de un usuario (mediante credenciales como correo y contraseña) antes de otorgarle privilegios dentro del sistema. 
+
+En el desarrollo de software, ciertas rutas y puntos finales de la API (endpoints) deben estar estrictamente protegidos para evitar que usuarios malintencionados o no autorizados alteren la base de datos, saboteen registros comunitarios o accedan a funciones administrativas sensibles (como eliminar una causa o editar votos). 
+
+Bajo ninguna circunstancia se debe exponer públicamente información confidencial que comprometa la integridad de la comunidad; esto incluye contraseñas (las cuales deben guardarse con hashing tipo bcrypt), tokens de sesión, claves de API de servicios externos como Telegram o n8n, números de identificación, direcciones residenciales exactas y registros telefónicos.
