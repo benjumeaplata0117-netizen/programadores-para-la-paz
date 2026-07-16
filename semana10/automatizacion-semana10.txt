@@ -1,0 +1,24 @@
+DISEÑO DE FLUJO DE AUTOMATIZACIÓN (n8n + TELEGRAM)
+
+1. ¿Qué evento activa el flujo?
+--------------------------------------------------------------------------------
+El flujo se activa mediante un nodo disparador de tipo "Webhook" en n8n. Este webhook escucha las peticiones POST que envía el formulario web cada vez que un ciudadano presiona el botón "Enviar Reporte".
+
+2. ¿Qué mensaje se enviaría a Telegram?
+--------------------------------------------------------------------------------
+El nodo de Telegram formateará el siguiente mensaje automatizado para el grupo de veeduría:
+
+"📢 ¡Nuevo reporte comunitario registrado!
+📍 Ubicación: [Sector/Barrio extraído del formulario]
+ Tipo de falla: [Falla de agua / Alumbrado / Vía / etc.]
+ Detalles: [Breve descripción de la incidencia]
+ Enlace de seguimiento: https://veeduria-comunitaria.org/reportes/[ID_del_reporte]
+Favor revisar el panel administrativo para asignar un veedor."
+
+3. ¿Qué información NO debería enviarse por seguridad y privacidad?
+--------------------------------------------------------------------------------
+Para cumplir con las normativas de protección de datos personales y evitar filtraciones de seguridad, queda estrictamente prohibido enviar a través del chat de Telegram:
+* Nombres, apellidos o identificaciones oficiales (cédulas/DNI) de los denunciantes.
+* Direcciones residenciales exactas (solo se manejan sectores o comunas generales).
+* Números de teléfono o correos electrónicos personales.
+* Credenciales, contraseñas del sistema o tokens de infraestructura de TI.

@@ -1,0 +1,19 @@
+PLANIFICACIÓN DE LA ITERACIÓN — SEMANA 10
+
+1. ¿Qué 2 tareas del backlog harías primero?
+--------------------------------------------------------------------------------
+* Tarea 1: Registro de Incidencias (Historia de Usuario 1).
+* Tarea 2: Alerta de Notificación en Telegram (Historia de Usuario 2).
+
+2. ¿Por qué son las más importantes?
+--------------------------------------------------------------------------------
+Estas dos tareas representan el "Mínimo Producto Viable" (MVP). Sin el Registro de Incidencias, el sistema no tiene datos con los cuales trabajar ni valor real que ofrecer a la comunidad. Por otro lado, la Alerta de Notificación en Telegram cierra el ciclo básico de comunicación, permitiendo que los coordinadores se enteren en tiempo real de que la ciudadanía está usando el sistema, activando una respuesta ágil sin necesidad de refrescar una base de datos de manera manual.
+
+3. Definición de "Terminado" (Definition of Done — DoD)
+--------------------------------------------------------------------------------
+Para que una tarea se considere formalmente terminada en nuestro flujo de desarrollo, debe cumplir estrictamente con los siguientes criterios:
+
+* FUNCIONAL: El código o flujo de automatización ejecuta la tarea esperada sin errores en el entorno de pruebas local.
+* PROBADA (Aseguramiento de Calidad): Se han realizado pruebas de extremo a extremo (por ejemplo, registrar un reporte de prueba y comprobar que la alerta llegue correctamente a Telegram).
+* SIN DATOS SENSIBLES: Se ha verificado que ninguna clave, token de bot de Telegram o credencial de n8n esté escrita directamente en el código (uso exclusivo de variables de entorno no subidas al repositorio).
+* REGISTRADA Y PUBLICADA: El código limpio se ha consolidado en una rama estable de Git y se ha subido exitosamente al repositorio remoto de GitHub.

@@ -1,0 +1,17 @@
+BACKLOG DE PROYECTO: Sistema de Reportes Comunitarios
+(Ordenado de Mayor a Menor Prioridad)
+
+[Prioridad Alta — Crítica para el valor del sistema]
+1. Historia de Usuario: Registro de Incidencias
+   Como ciudadano afectado por una falla en la comunidad, quiero registrar un reporte con una descripción del problema y la zona general para dejar evidencia pública del caso.
+
+[Prioridad Media — Coordinación y respuesta]
+2. Historia de Usuario: Alerta de Notificación
+   Como coordinador de la veeduría, quiero recibir una notificación automática en el canal de Telegram del equipo cuando ocurra un nuevo registro para poder revisarlo rápidamente.
+
+3. Historia de Usuario: Visualización y Filtro
+   Como miembro de la comunidad, quiero consultar una lista pública de reportes activos y filtrarlos por estado (pendiente, en revisión, resuelto) para hacer seguimiento a las respuestas de las autoridades.
+
+[Prioridad Baja — Deseable pero no crítica]
+4. Historia de Usuario: Generación de Reporte PDF Semanal
+   Como líder comunitario, quiero exportar un resumen semanal en formato PDF con el total de fallas reportadas para presentarlo formalmente en las asambleas locales.
