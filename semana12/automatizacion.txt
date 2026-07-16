@@ -1,0 +1,13 @@
+DISEÑO DE AUTOMATIZACIÓN DE NOTIFICACIONES
+
+1. Evento Disparador (Trigger):
+El flujo se activa mediante una petición HTTP POST originada en nuestra aplicación Node.js en el instante exacto en que una causa alcanza la meta mínima establecida de apoyos (por ejemplo, 50 firmas), o bien cuando se crea una nueva causa en la plataforma.
+
+2. Mensaje enviado a Telegram:
+"🚀 ¡Meta Alcanzada! La causa comunitaria '[Título_Causa]' ha recolectado los apoyos necesarios. El documento PDF de la petición formal ya se encuentra disponible para su descarga y radicación. 📝
+Detalle: [Enlace_Seguro_Plataforma]"
+
+3. Información que NO debe enviarse por seguridad:
+* Nombres, apellidos, cédulas o firmas digitalizadas de los ciudadanos que apoyaron la causa.
+* Números de contacto, correos electrónicos o direcciones de residencia privada.
+* Credenciales del bot de Telegram, contraseñas de bases de datos o tokens de acceso a n8n en el cuerpo del payload de red.

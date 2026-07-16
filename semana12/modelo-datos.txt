@@ -1,0 +1,25 @@
+MODELO DE DATOS: Plataforma "Petición en 3 Clics"
+
+Entidad 1: Causa
+--------------------------------------------------------------------------------
+Campos principales:
+- id: INT (Llave primaria, autoincremental)
+- titulo: VARCHAR(150) (Nombre claro de la problemática o iniciativa)
+- descripcion: TEXT (Detalle técnico de la solicitud comunitaria)
+- fecha_creacion: DATETIME (Marca de tiempo del registro)
+- estado: VARCHAR(30) (Ej. 'En recolección', 'Meta alcanzada', 'Radicado')
+
+Propósito:
+Almacena el núcleo de la petición ciudadana. Contiene el texto y los metadatos necesarios que posteriormente darán cuerpo al documento formal de derecho de petición en formato PDF.
+
+
+Entidad 2: Apoyo
+--------------------------------------------------------------------------------
+Campos principales:
+- id: INT (Llave primaria, autoincremental)
+- causa_id: INT (Llave foránea que conecta directamente con la entidad Causa)
+- token_anonimo: VARCHAR(64) (Identificador seguro y cifrado del firmante para evitar duplicados sin almacenar nombres reales)
+- fecha_apoyo: DATETIME (Registro de cuándo se realizó la firma digital)
+
+Propósito:
+Registrar y totalizar los respaldos individuales que validan la causa. Al estar relacionada mediante 'causa_id', permite realizar operaciones de agregación (COUNT) de forma segura y transparente para certificar la fuerza colectiva de la petición.

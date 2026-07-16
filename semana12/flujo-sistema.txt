@@ -1,0 +1,16 @@
+FLUJO DE TRABAJO: Sistema "Petición en 3 Clics"
+
+El sistema está diseñado para que un ciudadano pueda pasar de la identificación de un problema a la generación de una petición formal en solo tres interacciones principales (clics) dentro de la interfaz:
+
+[Clic 1: Publicar]
+1. Creación de la Causa: Un usuario autenticado llena un formulario básico y publica una causa comunitaria (Ej. "Reparación de luminarias en el parque central"). La causa se registra inmediatamente en la base de datos con un estado de "Activa".
+
+[Clic 2: Apoyar]
+2. Recolección de Respaldo: Otros miembros de la comunidad ingresan a la plataforma, leen la propuesta y presionan el botón para dar su apoyo. Cada interacción genera un nuevo registro vinculado en la tabla de apoyos, actualizando un contador público en tiempo real.
+
+3. Monitoreo Automatizado: Al alcanzar un umbral mínimo de apoyos (por ejemplo, 50 apoyos), el backend de Node.js detecta el evento y activa un webhook hacia n8n para notificar al grupo de coordinación.
+
+[Clic 3: Descargar]
+4. Generación Dinámica de PDF: El coordinador o el creador de la causa presiona el botón "Generar Petición Formal". El sistema recopila el título, la descripción, la fecha y el número consolidado de apoyos, y compila un documento PDF estructurado bajo un formato legal/administrativo de derecho de petición.
+
+5. Entrega de Evidencia: El sistema descarga el PDF generado para que la comunidad pueda radicarlo formalmente ante las entidades municipales pertinentes, cerrando el ciclo de veeduría.
